@@ -9,6 +9,14 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
       />
+      <style>
+        body {background-color: powderblue;}
+        h1   {color: rgba(0, 0, 255, 0.577);}
+        p    {color: rgb(0, 0, 0);}
+        h3   {color: rgb(4, 250, 0)}
+        a    {color: rgb(226, 232, 226)}
+        div  {color: rgb(215, 62, 210)}
+       </style> 
     </head>
     <body>
       <div class="container">
@@ -34,7 +42,7 @@
 
       <!-- Section for Featured Image and Facts table -->
       <div class="row" id="mars-featured-image">
-        <div class="col-md-8">
+        <div class="col-xs-12 .col-md-8">
           <h2>Featured Mars Image</h2>
 
           <!-- if images is False/None/non-existent, then default to error message -->
@@ -45,7 +53,7 @@
           />
         </div>
 
-        <div class="col-md-4">
+        <div class="col-xs-6 .col-md-4">
           <!-- Mars Facts -->
           <div class="row" id="mars-facts">
             <h4>Mars Facts</h4>
@@ -61,7 +69,7 @@
         </div>
 
         {% for hemisphere in mars.hemispheres %}
-        <div class="col-md-6">
+        <div class="col-xs-6 .col-lg-4">
           <div class="thumbnail">
             <img src="{{hemisphere.img_url | default('static/images/error.png', true)}}" alt="...">
             <div class="caption">
